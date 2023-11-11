@@ -9,7 +9,7 @@ ROW_COUNT = 6
 BLUE = (0, 76, 153)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
-YELLOW = (255, 255, 0)
+Black = (0, 0, 0)
 
 def main():
     board = create_board()
@@ -46,7 +46,7 @@ def main():
                 if turn == 0:
                     pygame.draw.circle(screen, RED, (posx, int(SQUARESIZE / 2)), RADIUS)
                 else:
-                    pygame.draw.circle(screen, YELLOW, (posx, int(SQUARESIZE / 2)), RADIUS)
+                    pygame.draw.circle(screen, Black, (posx, int(SQUARESIZE / 2)), RADIUS)
             pygame.display.update()
 
             if event.type == pygame.MOUSEBUTTONDOWN:
@@ -86,7 +86,7 @@ def main():
                         label = myfont.render("Player 1 wins!!", 1, RED)
                         screen.blit(label, (40, 10))
                     elif numbers_of_connected_fours_player2 > numbers_of_connected_fours_player1:
-                        label = myfont.render("Player 2 wins!!", 1, YELLOW)
+                        label = myfont.render("Player 2 wins!!", 1, Black)
                         screen.blit(label, (40, 10))
                     else:
                         label = myfont.render("No winner!!", 1, RED)
